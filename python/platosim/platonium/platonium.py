@@ -2234,10 +2234,10 @@ parser.add_argument('-a', '--animation', action='store_true',  help='Flag to gen
 parser.add_argument('-v', '--verbose', metavar='NR', type=int, help='Verbosity level [0, 1, 3] (Default: 1)')
 
 man_group = parser.add_argument_group('MANDATORY PARAMETERS')
-man_group.add_argument('starID',   type=int, help='Star ID in target list (or CCD in [1, 2, 3, 4] using --fullframe)')
-man_group.add_argument('groupID',  type=int, help='Camera group ID [1, 2, 3, 4, 5] (F-CAM = 5)')
-man_group.add_argument('cameraID', type=int, help='N-CAM in [1, 2, 3, 4, 5, 6]; F-CAM in {1, 2}')
-man_group.add_argument('quarter',  type=int, help='Mission quarter in [1, 2, 3, 4, ..]')
+man_group.add_argument('starID',   type=int, help='Star ID in target list (or CCD in {1, 2, 3, 4} using --fullframe)')
+man_group.add_argument('groupID',  type=int, help='Camera group ID in {1, 2, 3, 4, 5} (F-CAM = 5)')
+man_group.add_argument('cameraID', type=int, help='N-CAM in {1, 2, 3, 4, 5, 6}; F-CAM in {1, 2}')
+man_group.add_argument('quarter',  type=int, help='Mission quarter in {1, 2, 3, 4, ..}')
 
 rec_group = parser.add_argument_group('RECOMMENTED PARAMETERS')
 rec_group.add_argument('--seed',        metavar='INT',  type=int, help='Option to bootstrap seeds ro reproduce results')

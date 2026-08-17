@@ -5092,7 +5092,7 @@ def load_pic(version='2.2.0.1'):
     dt['fgPIC']   = df.fgPICsourceFlag
     dt['cPIC']    = df.cPICsourceFlag
     dt['scvPIC']  = df.scvPICsourceFlag
-
+    dt['NSR']     = df.BOLrandomSysNSRNCAM_T
     # dt.ncams.unique()
         
     return dt
@@ -5108,9 +5108,9 @@ def get_GaiaDR3_ID(df, column='StarName'):
     # and is accompanied by a Jupiter-sized planet/brown dwarf (20 MJ)
     # See Santos et al. 2002 and Zucker et al. 2004.
     def split_gaia_dr3_id( x):
-        split = x.split( ' ')
-        if split[ 0] == 'Gaia':
-            return split[ -1]
+        split = x.split(' ')
+        if split[0] == 'Gaia':
+            return split[-1]
         else:
             return 0
         
